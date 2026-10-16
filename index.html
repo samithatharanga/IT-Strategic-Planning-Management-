@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IT Strategic Planning & Management — Master Study Portal</title>
+  <title>IT Strategic Planning & Management — Complete Master Portal</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Sinhala:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
@@ -25,6 +25,14 @@
     .example-badge {
       background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(5, 150, 105, 0.25));
       border-left: 4px solid #10b981;
+    }
+    .tip-box {
+      background: rgba(245, 158, 11, 0.1);
+      border-left: 4px solid #f59e0b;
+      padding: 12px;
+      margin-top: 10px;
+      border-radius: 6px;
+      font-size: 14px;
     }
     .tab-active {
       background: linear-gradient(135deg, #3b82f6, #2563eb);
@@ -67,29 +75,32 @@
         <span class="text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded bg-blue-500/20 text-blue-400 border border-blue-500/30">
           NIIBS · BSc (Hons) in IT · Year 4 Semester 1
         </span>
-        <h1 class="text-2xl font-bold text-white mt-1">IT Strategic Planning & Management — Master Portal</h1>
+        <h1 class="text-2xl font-bold text-white mt-1">IT Strategic Planning & Management — Complete Master Portal</h1>
       </div>
       <div class="w-full md:w-72">
-        <input type="text" id="searchInput" onkeyup="filterContent()" placeholder="🔍 සොයන්න (BPM, Strategy, PESTEL...)" 
+        <input type="text" id="searchInput" onkeyup="filterContent()" placeholder="🔍 සොයන්න (BPM, Leadership, PESTEL...)" 
           class="w-full px-4 py-2 rounded-lg bg-slate-800 border border-slate-700 text-sm text-white focus:outline-none focus:border-blue-500">
       </div>
     </div>
 
     <!-- Navigation Tabs -->
     <div class="max-w-7xl mx-auto mt-4 flex flex-wrap gap-2">
-      <button onclick="switchTab('notes')" id="btn-notes" class="tab-btn tab-active px-4 py-2 rounded-lg text-sm font-semibold transition">
-        📖 අත්පිටපත් සටහන් (Notes Story)
+      <button onclick="switchTab('leadership')" id="btn-leadership" class="tab-btn tab-active px-4 py-2 rounded-lg text-sm font-semibold transition bg-slate-800 text-slate-300">
+        👑 Strategic Leadership
       </button>
-      <button onclick="switchTab('topic1')" id="btn-topic1" class="tab-btn bg-slate-800 hover:bg-slate-700 text-slate-300 px-4 py-2 rounded-lg text-sm font-semibold transition">
+      <button onclick="switchTab('notes')" id="btn-notes" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold transition bg-slate-800 text-slate-300">
+        📖 Handwritten Notes (Story)
+      </button>
+      <button onclick="switchTab('topic1')" id="btn-topic1" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold transition bg-slate-800 text-slate-300">
         📌 Topic 1: BPM
       </button>
-      <button onclick="switchTab('topic2')" id="btn-topic2" class="tab-btn bg-slate-800 hover:bg-slate-700 text-slate-300 px-4 py-2 rounded-lg text-sm font-semibold transition">
+      <button onclick="switchTab('topic2')" id="btn-topic2" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold transition bg-slate-800 text-slate-300">
         📌 Topic 2: Strategic Implications
       </button>
-      <button onclick="switchTab('session6')" id="btn-session6" class="tab-btn bg-slate-800 hover:bg-slate-700 text-slate-300 px-4 py-2 rounded-lg text-sm font-semibold transition">
+      <button onclick="switchTab('session6')" id="btn-session6" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold transition bg-slate-800 text-slate-300">
         📌 Session 6: Business Strategy
       </button>
-      <button onclick="switchTab('session7')" id="btn-session7" class="tab-btn bg-slate-800 hover:bg-slate-700 text-slate-300 px-4 py-2 rounded-lg text-sm font-semibold transition">
+      <button onclick="switchTab('session7')" id="btn-session7" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold transition bg-slate-800 text-slate-300">
         📌 Session 7: Competitive Dynamics
       </button>
       <button onclick="switchTab('mcqbank')" id="btn-mcqbank" class="tab-btn bg-amber-600/20 border border-amber-500/40 text-amber-300 hover:bg-amber-600/30 px-4 py-2 rounded-lg text-sm font-semibold transition">
@@ -100,75 +111,158 @@
 
   <main class="max-w-7xl mx-auto px-6 mt-8">
 
-    <!-- ==================== TAB 1: HANDWRITTEN NOTES (STORY STYLE IN SINHALA) ==================== -->
-    <section id="notes" class="tab-content space-y-6">
-      <div class="glass-card p-6 border-l-4 border-pink-500">
-        <h2 class="text-xl font-bold text-white">📖 අත්පිටපත් සටහන් (Handwritten Notes) - සරල කතාවක් ලෙස</h2>
-        <p class="text-sm text-slate-400 mt-1">කිසිවක් නොදන්නා අයෙකුට වුවද පහසුවෙන් වැටහෙන පරිදි අත්පිටපත් සටහන්වල (Notes 1–6) ඇති මූලික කරුණු සිංහලෙන් විස්තර කර ඇත.</p>
+    <!-- ==================== TAB 0: STRATEGIC LEADERSHIP (NEW) ==================== -->
+    <section id="leadership" class="tab-content space-y-6">
+      <div class="glass-card p-6 border-l-4 border-amber-500">
+        <h2 class="text-xl font-bold text-white">👑 Strategic Leadership: Concept, Types & Exam Notes</h2>
+        <p class="text-sm text-slate-400 mt-1">උපායමාර්ගික නායකත්වය සහ නායකත්ව විලාස 8 පිළිබඳ සරල සිංහල පැහැදිලි කිරීම් සහ උදාහරණ.</p>
       </div>
 
-      <!-- Part 1: Strategy & Competitiveness -->
+      <div class="glass-card p-6 searchable">
+        <h3 class="text-lg font-bold text-amber-400">Part A: උපායමාර්ගික නායකත්වය (Strategic Leadership Concepts)</h3>
+        <p class="text-sm text-slate-300 mt-2 leading-relaxed">
+          <strong>Strategic Leadership යනු කුමක්ද?</strong><br>
+          අනාගතයේ සිදුවන වෙනස්කම් আগුතින් හඳුනා ගැනීම (Anticipate), පැහැදිලි දෘෂ්ටියක් ඇති කර ගැනීම (Envision), නම්‍යශීලී බව පවත්වා ගැනීම (Flexibility), විශාල වශයෙන් සිතීම (Think Big) සහ ආයතනයේ අනාගතය සාර්ථක කර ගැනීම සඳහා තීරණාත්මක පියවර ගැනීමට අන් අය සමඟ කටයුතු කිරීමේ හැකියාවයි.
+        </p>
+
+        <h4 class="font-semibold text-white mt-4 mb-2 text-sm">The Strategic Leadership Triangle (උපායමාර්ගික නායකත්ව ත්‍රිකෝණය - කුළුණු 3):</h4>
+        <ul class="list-disc list-inside text-xs text-slate-300 space-y-1">
+          <li><strong>VISION (දර්ශනය):</strong> අපි යන්නේ කොතනටද? <span class="text-amber-400 font-semibold">(දර්ශනයක් නොමැති උපායමාර්ගයක් යනු දිවා සිහින / Daydreaming වේ)</span></li>
+          <li><strong>STRATEGY (උපායමාර්ගය):</strong> අපි එහි යන්නේ කෙසේද? <span class="text-amber-400 font-semibold">(උපායමාර්ගයක් නොමැති ක්‍රියාත්මක කිරීමක් යනු අකර්මන්‍යතාවය / Paralysis වේ)</span></li>
+          <li><strong>EXECUTION (ක්‍රියාත්මක කිරීම):</strong> අපි දැන් කළ යුත්තේ කුමක්ද? <span class="text-amber-400 font-semibold">(ක්‍රියාත්මක කිරීමක් නොමැති දර්ශනයක් යනු අරමුණක් නැති ක්‍රියාවකි / Aimless activity)</span></li>
+        </ul>
+
+        <div class="example-box mt-3">
+          <strong>💡 සරල උදාහරණයකින් තේරුම් ගනිමු:</strong> 
+          සමාගමක් හිතනවා මගීන්ව සඳට ගෙන යනවා කියල (Vision). ඒත් එතෙන්ට යන්නේ කොහොමද කියන පාර හදන්නේ නැතුව නිකන් ඉන්නවා නම් ඒක අකර්මන්‍යතාවයක් (Paralysis). පාර හැදුවත් රොකට්ටුව පදවන්නේ නැතුව බලාගෙන ඉන්නවා නම් ඒක දිවා සිහිනයක් (Daydreaming).
+        </div>
+
+        <h4 class="font-semibold text-white mt-4 mb-2 text-sm">Strategic vs Operational Leadership (ප්‍රධාන වෙනස):</h4>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm custom-table">
+            <thead>
+              <tr>
+                <th>විශේෂණය</th>
+                <th>Operational Leadership (මෙහෙයුම්)</th>
+                <th>Strategic Leadership (උපායමාර්ගික)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="font-bold">ফocus / අවධානය</td>
+                <td>දෛනික ක්‍රියාකාරකම් (Day-to-day execution)</td>
+                <td>දිගුකාලීන දැක්ම (Long-term vision)</td>
+              </tr>
+              <tr>
+                <td class="font-bold">Time Horizon / කාලය</td>
+                <td>දින 1 සිට වසර 1 දක්වා</td>
+                <td>අවුරුදු 3 සිට 10 දක්වා</td>
+              </tr>
+              <tr>
+                <td class="font-bold">Key Question / මූලික පැනය</td>
+                <td>"අපි මෙය කරන්නේ කෙසේද?" (How do we do it?)</td>
+                <td>"අපි කුමක් කළ යුතුද සහ එය කරන්නේ ඇයි?" (Why & what?)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="glass-card p-6 searchable">
+        <h3 class="text-lg font-bold text-amber-400">Part B: උපායමාර්ගික නායකත්ව විලාස 8 (8 Core Types of Leadership Styles)</h3>
+        <p class="text-sm text-slate-300 mt-2">විභාගයට අනිවාර්යයෙන්ම MCQ සඳහා අසන ප්‍රධාන නායකත්ව විලාස 8 මෙන්න:</p>
+        <div class="space-y-3 mt-3 text-xs text-slate-300">
+          <div class="p-3 bg-slate-900/70 rounded border border-slate-800">
+            <strong>1. Transformational Leadership (පරිවර්තනීය නායකත්වය):</strong> අනුගාමිකයින්ගේ ස්වයං-අභිමතාර්ථ පසෙකලා පොදු යහපත උදෙසා කටයුතු කිරීමට පෙළඹවීම.<br>
+            <em>ප්‍රධාන අංග 4 (The 4 I's):</em> Idealized Influence, Inspirational Motivation, Intellectual Stimulation, Individual Consideration.<br>
+            <span class="text-amber-400">උදාහරණය: Satya Nadella (Microsoft) - සංස්කෘතිය වෙනස් කර ආයතනය ඉහළටම ගෙන යාම.</span>
+          </div>
+          <div class="p-3 bg-slate-900/70 rounded border border-slate-800">
+            <strong>2. Transactional Leadership (ගනුදෙනුකාරක නායකත්වය):</strong> අධීක්ෂණය, සංවිධානය, ඵලදායිතා කළමනාකරණය සහ ත්‍යාග/දඬුවම් (Rewards/Punishments) මත පදනම් වේ.<br>
+            <span class="text-amber-400">උදාහරණය: Bill Belichick (NFL කණ්ඩායම් පුහුණුකරු) - නීති රීති සහ කාර්යසාධනය මත පදනම් වීම.</span>
+          </div>
+          <div class="p-3 bg-slate-900/70 rounded border border-slate-800">
+            <strong>3. Charismatic Leadership (චමත්කාරජනක නායකත්වය):</strong> පෞද්ගලික චුම්භකත්වය සහ චිත්තවේගීය ආයාචනය හරහා දැඩි භක්තියක් සහ උද්යෝගයක් ඇති කරයි.<br>
+            <em>ප්‍රධාන අවදානම:</em> තනි පුද්ගලයෙකු මත පමණක් ඕනෑවට වඩා යැපීම නිසා අනුප්‍රාප්තික අර්බුද (Succession vulnerability) ඇති විය හැක.<br>
+            <span class="text-amber-400">උදාහරණය: Steve Jobs, Elon Musk.</span>
+          </div>
+          <div class="p-3 bg-slate-900/70 rounded border border-slate-800">
+            <strong>4. Visionary Leadership (දර්ශනවාදී නායකත්වය):</strong> අනාගතය පිළිබඳ යථාර්ථවාදී, විශ්වාසදායක සහ ආකර්ෂණීය දැක්මක් නිර්මාණය කර ඉදිරිපත් කරයි.<br>
+            <span class="text-amber-400">උදාහරණය: John F. Kennedy ("සඳ මත මිනිසෙකු ගොඩබෑම"), Jeff Bezos.</span>
+          </div>
+          <div class="p-3 bg-slate-900/70 rounded border border-slate-800">
+            <strong>5. Servant Leadership (සේවක මූලික නායකත්වය):</strong> අනුගාමිකයින්ගේ අවශ්‍යතාවන්ට මුල්තැන දෙමින්, ඔවුන්ව බලගන්වමින් ඉහළම හැකියාවෙන් ක්‍රියා කිරීමට මඟ පෙන්වයි.<br>
+            <span class="text-amber-400">උදාහරණය: Herb Kelleher (Southwest Airlines) - සේවකයින් පළමුව, ගනුදෙනුකරුවන් දෙවනුව.</span>
+          </div>
+          <div class="p-3 bg-slate-900/70 rounded border border-slate-800">
+            <strong>6. Situational Leadership (සන්දර්භගත නායකත්වය):</strong> අනුගාමිකයින්ගේ සූදානම සහ නිපුණතාවය මත පදනම්ව (Hersey-Blanchard Model) නායකත්ව විලාසය වෙනස් කිරීම (Telling, Selling, Participating, Delegating).
+          </div>
+          <div class="p-3 bg-slate-900/70 rounded border border-slate-800">
+            <strong>7. Collaborative / Shared Leadership (හවුල් නායකත්වය):</strong> තීරණ ගැනීමේ බලය තනි ධූරාවලියකට සීමා නොවී කණ්ඩායම් අතර බෙදී යාම (උදා: Agile software development teams).
+          </div>
+          <div class="p-3 bg-slate-900/70 rounded border border-slate-800">
+            <strong>8. Digital / Technology Leadership (ඩිජිටල්/තාක්ෂණික නායකත්වය):</strong> උපායමාර්ගික වාසි සහ නවීකරණය සඳහා තාක්ෂණික නවෝත්පාදන (AI, Cloud, Automation) භාවිත කිරීම.
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card p-6 searchable border-l-4 border-emerald-500">
+        <h3 class="text-lg font-bold text-emerald-400">Exam Quick Tips (විභාගයට අත්‍යවශ්‍ය කෙටි කරුණු)</h3>
+        <ul class="text-xs text-slate-300 space-y-1.5 mt-2">
+          <li>• <strong>Strategy without Execution =</strong> Daydreaming (දිවා සිහින).</li>
+          <li>• <strong>Strategy without Execution (වෙනත් සන්දර්භයකදී) =</strong> Paralysis (අකර්මන්‍යතාවය).</li>
+          <li>• <strong>AMC Model (තරඟකාරී ගතිකත්වය):</strong> Awareness (දැනුවත්භාවය), Motivation (පෙළඹවීම), Capability (හැකියාව) යන තුනම තිබුණහොත් පමණක් ප්‍රතිවාදියා ප්‍රතිචාර දක්වයි.</li>
+          <li>• <strong>Transformational 4 I's =</strong> Influence, Motivation, Stimulation, Consideration.</li>
+        </ul>
+        <div class="tip-box">
+          <strong>📝 පාඩම් කරගැනීමේ පහසුවට:</strong> 
+          විභාගයේදී නායකත්ව විලාස ගැන අසන විට, <em>Satya Nadella</em> නම් එය <strong>Transformational</strong> බවත්, <em>Steve Jobs</em> නම් එය <strong>Charismatic</strong> බවත්, නීති රීති සහ ත්‍යාග ගැන කියනවා නම් එය <strong>Transactional</strong> බවත් වෙන් කර හඳුනාගන්න.
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 1: HANDWRITTEN NOTES (STORY STYLE IN SINHALA) ==================== -->
+    <section id="notes" class="tab-content hidden space-y-6">
+      <div class="glass-card p-6 border-l-4 border-pink-500">
+        <h2 class="text-xl font-bold text-white">📖 අත්පිටපත් සටහන් (Handwritten Notes) - සරල කතාවක් ලෙස</h2>
+        <p class="text-sm text-slate-400 mt-1">කිසිවක් නොදන්නා අයෙකුට වුවද පහසුවෙන් වැටහෙන පරිදි අත්පිටපත් සටහන්වල ඇති මූලික කරුණු සිංහලෙන් විස්තර කර ඇත.</p>
+      </div>
+
       <div class="glass-card p-6 searchable">
         <h3 class="text-lg font-bold text-pink-400">1. Strategy සහ Strategic Management (සටහන් පිටු 1)</h3>
         <p class="text-sm text-slate-300 mt-2 leading-relaxed">
-          කතාවක් ලෙස සිතන්න: ඔබ අලුත් ව්‍යාපාරයක් පටන් ගන්නවා. ඔබට අවශ්‍යයි ඔබේ අරමුණු දිනාගන්න සහ ගරිසන් අතර කැපී පෙනෙන්න. මේ සඳහා ඔබ ගන්නා තීරණ සහ ක්‍රියාමාර්ගවල එකතුවට අපි <strong>Strategy</strong>[cite: 6] කියනවා. 
-          මේ Strategy එක ක්‍රියාත්මක කරන්නේ කොහොමද? ඒ සඳහා අපිට <strong>Strategic Management</strong> ක්‍රියාවලිය අවශ්‍ය වෙනවා. මෙහි ප්‍රධාන පියවර 4ක් තියෙනවා[cite: 6]:
+          කතාවක් ලෙස සිතන්න: ඔබ අලුත් ව්‍යාපාරයක් පටන් ගන්නවා. ඔබට අවශ්‍යයි ඔබේ අරමුණු දිනාගන්න සහ වෙළඳපොලේ කැපී පෙනෙන්න. මේ සඳහා ඔබ ගන්නා තීරණ සහ ක්‍රියාමාර්ගවල එකතුවට අපි <strong>Strategy</strong> කියනවා. මේ Strategy එක ක්‍රියාත්මක කරන්නේ කොහොමද? ඒ සඳහා අපිට <strong>Strategic Management</strong> ක්‍රියාවලිය අවශ්‍ය වෙනවා. මෙහි ප්‍රධාන පියවර 4ක් තියෙනවා:
         </p>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 mt-4 text-xs">
-          <div class="p-3 bg-slate-900/80 rounded border border-slate-800"><strong>1. Analyse:</strong> පරිසරය සහ තත්ත්වය විශ්ලේෂණය කිරීම[cite: 6].</div>
-          <div class="p-3 bg-slate-900/80 rounded border border-slate-800"><strong>2. Formulate:</strong> උපායමාර්ගය සැලසුම් කිරීම/සකස් කිරීම[cite: 6].</div>
-          <div class="p-3 bg-slate-900/80 rounded border border-slate-800"><strong>3. Implement:</strong> සැලසුම ක්‍රියාත්මක කිරීම[cite: 6].</div>
-          <div class="p-3 bg-slate-900/80 rounded border border-slate-800"><strong>4. Evaluate:</strong> ප්‍රතිඵල අගයමින් පාලනය කිරීම[cite: 6].</div>
+          <div class="p-3 bg-slate-900/80 rounded border border-slate-800"><strong>1. Analyse:</strong> පරිසරය සහ තත්ත්වය විශ්ලේෂණය කිරීම.</div>
+          <div class="p-3 bg-slate-900/80 rounded border border-slate-800"><strong>2. Formulate:</strong> උපායමාර්ගය සැලසුම් කිරීම/සකස් කිරීම.</div>
+          <div class="p-3 bg-slate-900/80 rounded border border-slate-800"><strong>3. Implement:</strong> සැලසුම ක්‍රියාත්මක කිරීම.</div>
+          <div class="p-3 bg-slate-900/80 rounded border border-slate-800"><strong>4. Evaluate:</strong> ප්‍රතිඵල අගයමින් පාලනය කිරීම.</div>
         </div>
         <div class="example-badge p-3 rounded-lg mt-4 text-xs">
           <strong>💡 Strategic Management vs. Strategic Competitiveness:</strong> 
-          <br>• <strong>Management</strong> යනු අප කරන ක්‍රියාවලියයි (Action or Process)[cite: 6].
-          <br>• <strong>Competitiveness</strong> යනු අපට ලැබෙන අවසාන ප්‍රතිඵලයයි (Goal or Outcome) — එනම් වෙළඳපොලේ තරඟකරුවන් දණගස්වා අප දිනුම් කණුවට යාමයි[cite: 6]!
-          <br><em>උදාහරණය:</em> සමාගම් A සහ B ස්මාර්ට්ෆෝන් සාදනවා. සමාගම් B විසින් නව්‍ය විශේෂාංග සහ විශිෂ්ට පාරිභෝගික සේවාවක් දී වෙළඳපොළ දිනා ගැනීම <strong>Strategic Competitiveness</strong> වේ[cite: 6].
+          <br>• <strong>Management</strong> යනු අප කරන ක්‍රියාවලියයි (Action or Process).
+          <br>• <strong>Competitiveness</strong> යනු අපට ලැබෙන අවසාන ප්‍රතිඵලයයි (Goal or Outcome) — එනම් වෙළඳපොලේ තරඟකරුවන් දණගස්වා අප දිනුම් කණුවට යාමයි!
         </div>
       </div>
 
-      <!-- Part 2: Environment & Activity 1 -->
       <div class="glass-card p-6 searchable">
         <h3 class="text-lg font-bold text-pink-400">2. ව්‍යාපාරයක බාහිර හා අභ්‍යන්තර පරිසරය (සටහන් පිටු 2, 4, 5)</h3>
         <p class="text-sm text-slate-300 mt-2">
-          කිසිම ව්‍යාපාරයක් තනිකඩව ලෝකයේ පවතින්නේ නැහැ[cite: 5]. එයට බාහිර පරිසරය (External Environment) සහ අභ්‍යන්තර පරිසරය (Internal Environment) බලපානවා[cite: 3, 5].
+          කිසිම ව්‍යාපාරයක් තනිකඩව ලෝකයේ පවතින්නේ නැහැ. එයට බාහිර පරිසරය (External Environment) සහ අභ්‍යන්තර පරිසරය (Internal Environment) බලපානවා.
         </p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 text-sm">
           <div class="p-4 bg-slate-900/70 rounded border border-slate-800">
             <strong class="text-amber-400 block mb-2">🌍 බාහිර පරිසරය (External):</strong>
-            ආයතනයෙන් පිටත පවතින, ආයතනයට සෘජුව හෝ පරෝක්ෂව බලපාන සාධකයි[cite: 5].
-            <br>• <strong>Direct Interactive:</strong> පාරිභෝගිකයින්, තරඟකරුවන්, සැපයුම්කරුවන් (සෘජුව බලපායි)[cite: 5].
-            <br>• <strong>Indirect Interactive (PESTEL):</strong> රාජ්‍ය, ආර්ථික, සමාජීය, තාක්ෂණික, පරිසර, නීතිමය සාධක[cite: 3, 5].
+            ආයතනයෙන් පිටත පවතින, ආයතනයට සෘජුව හෝ පරෝක්ෂව බලපාන සාධකයි.
+            <br>• <strong>Direct Interactive:</strong> පාරිභෝගිකයින්, තරඟකරුවන්, සැපයුම්කරුවන් (සෘජුව බලපායි).
+            <br>• <strong>Indirect Interactive (PESTEL):</strong> රාජ්‍ය, ආර්ථික, සමාජීය, තාක්ෂණික, පරිසර, නීතිමය සාධක.
           </div>
           <div class="p-4 bg-slate-900/70 rounded border border-slate-800">
             <strong class="text-emerald-400 block mb-2">🏢 අභ්‍යන්තර පරිසරය (Internal):</strong>
-            ආයතනය ඇතුළත පවතින සහ ආයතනයට පාලනය කළ හැකි සාධකයි[cite: 3].
-            <br>• <em>ഉദാහරണ:</em> සේවකයින්, කුසලතා, ආයතනික සංස්කෘතිය, මූල්‍ය සම්පත් (IT Budget), IT යටිතල පහසුකම්, ව්‍යාපාර ක්‍රියාවලි[cite: 2, 3].
-            <br>• <em>සටහන් මතක තබා ගැනීමට:</em> ABC විශ්වවිද්‍යාලයේ ක්‍රියාකාරකමේදී ශක්තීන් (Strengths) ලෙස හොඳ Wi-Fi සහ ශක්තිමත් කණ්ඩායම් කුසලතා තිබූ අතර දුර්වලතා (Weaknesses) ලෙස පැරණි පද්ධති සහ කුඩා IT කණ්ඩායමක් විය[cite: 2].
+            ආයතනය ඇතුළත පවතින සහ ආයතනයට පාලනය කළ හැකි සාධකයි.
+            <br>• <em>උදාහරණ:</em> සේවකයින්, කුසලතා, ආයතනික සංස්කෘතිය, මූල්‍ය සම්පත් (IT Budget), IT යටිතල පහසුකම්, ව්‍යාපාර ක්‍රියාවලි.
           </div>
-        </div>
-      </div>
-
-      <!-- Part 3: University Digital Case Study -->
-      <div class="glass-card p-6 searchable">
-        <h3 class="text-lg font-bold text-pink-400">3. විශ්වවිද්‍යාල ඩිජිටල් පරිවර්තන නඩුව (සටහන් පිටු 3, 4)</h3>
-        <p class="text-sm text-slate-300 mt-2">
-          සාම්ප්‍රදායිකව අතින් කටයුතු කළ විශ්වවිද්‍යාලයක් ඩිජිටල් පද්ධති (SIS, LMS, AI tools, Cloud storage) වෙත මාරුවීමේදී මුහුණදෙන අභියෝග සහ විසඳුම්[cite: 4]:
-        </p>
-        <ul class="list-disc list-inside text-xs text-slate-300 space-y-1 mt-2">
-          <li><strong>ප්‍රමුඛතාවය දිය යුත්තේ කුමකටද?</strong> Student Information System (SIS) සහ LMS වෙත, මන්ද දෛනික කාර්යබහුලත්වය සහ සිසුන් ලුහුබැඳීම (tracking) එයින් ක්ෂණිකව පහසු වේ[cite: 4].</li>
-          <li><strong>අවදානම් (Risks) පාලනය කරන්නේ කෙසේද?</strong> දැඩි සයිබර් ආරක්ෂක ප්‍රොටෝකෝල යෙදීම, නිත්‍ය පුහුණු ලබා දීම සහ පූර්ණ දියත් කිරීමට පෙර කුඩා පරීක්ෂණ මට්ටමින් (Small trial/pilot) ඇරඹීම[cite: 3, 4].</li>
-        </ul>
-      </div>
-
-      <!-- Part 4: Session 6 Q&A -->
-      <div class="glass-card p-6 searchable">
-        <h3 class="text-lg font-bold text-pink-400">4. IT Strategy පිළිබඳ මූලික ප්‍රශ්න සහ පිළිතුරු (සටහන් පිටුව 6)</h3>
-        <div class="space-y-2 mt-2 text-xs text-slate-300">
-          <div class="p-3 bg-slate-900/70 rounded"><strong>Q: IT මඟින් ව්‍යාපාරයකට වටිනාකම ගෙන එන්නේ කෙසේද?</strong><br>A: නව නිෂ්පාදන/සේවා ලබා දීමෙන්, තීරණ ගැනීම වේගවත් කිරීමෙන්, පිරිවැය කපා හැරීමෙන් සහ ග්‍රාහකයින් වෙත ඉක්මනින් ළඟා වීමෙන්[cite: 1].</div>
-          <div class="p-3 bg-slate-900/70 rounded"><strong>Q: IT සංවර්ධනයේ අවධි 4 මොනවාද?</strong><br>A: Support Tool ➔ Efficiency Enabler ➔ Competitive Weapon ➔ Strategic Partner[cite: 1].</div>
-          <div class="p-3 bg-slate-900/70 rounded"><strong>Q: Strategic Alignment යනු කුමක්ද?</strong><br>A: Business Strategy, IT Strategy, ආයතනික සහ IT යටිතල පහසුකම් යන සියල්ල එකිනෙකට නිසි ලෙස ගැළපීමයි (Alignment)[cite: 1].</div>
         </div>
       </div>
     </section>
@@ -191,18 +285,7 @@
           <li>4. <strong>Measurable:</strong> කාලය, පිරිවැය සහ ගුණාත්මකභාවය අනුව මැනිය හැකි වීම.</li>
         </ul>
         <div class="example-badge p-3 rounded-lg mt-3 text-xs">
-          <strong>🌍 Real-World Example (Order-to-Cash):</strong> Amazon හරහා භාණ්ඩයක් ඇණවුම් කළ පසු, ගොඩදාම් පරීක්ෂාව, ඇසුරුම් කිරීම, ගෙවීම් සැකසීම සහ ඩිලිවරි කිරීම යන අංශ ගණනාවක් හරහා ක්‍රියාවලිය ක්‍රියාත්මක වේ (Cross-functional & Repeatable).
-        </div>
-      </div>
-      <div class="glass-card p-6 searchable">
-        <h3 class="text-lg font-bold text-blue-400">1.2 Related Terms & BPM Lifecycle (7 Phases)</h3>
-        <p class="text-xs text-slate-300">
-          • <strong>BPM:</strong> සමස්ත ක්‍රියාවලියම අඛණ්ඩව කළමනාකරණය කිරීමේ විනයයි.<br>
-          • <strong>BPR (Process Reengineering):</strong> ක්‍රියාවලියක් මුල සිට සම්පූර්ණයෙන්ම අලුතින් සැලසුම් කිරීමයි (Radical redesign from scratch).<br>
-          • <strong>Process Mining:</strong> ERP/CRM event logs සහ AI භාවිතයෙන් සැබෑ ක්‍රියාවලිය ක්‍රියාත්මක වන ආකාරය සෙවීමයි.
-        </p>
-        <div class="mcq-badge p-3 rounded-lg mt-3 text-xs">
-          <strong>🔄 BPM Lifecycle පියවර 7:</strong> 1. Discover ➔ 2. Model ➔ 3. Analyse ➔ 4. Measure ➔ 5. Improve/Redesign (<strong>Lean</strong> = නාස්ති ඉවත් කිරීම, <strong>Six Sigma</strong> = දෝෂ අවම කිරීම) ➔ 6. Optimise & Automate ➔ 7. Monitor.
+          <strong>🌍 Real-World Example (Order-to-Cash):</strong> Amazon හරහා භාණ්ඩයක් ඇණවුම් කළ පසු, ගොඩදාම් පරීක්ෂාව, ඇසුරුම් කිරීම, ගෙවීම් සැකසීම සහ ඩිලිවරි කිරීම යන අංශ ගණනාවක් හරහා ක්‍රියාවලිය ක්‍රියාත්මක වේ.
         </div>
       </div>
     </section>
@@ -222,9 +305,6 @@
           • <strong>Intra-Organisational Systems (ආයතනය ඇතුළත):</strong> ERP, Internal MIS, Intranets, TPS.<br>
           • <strong>Inter-Organisational Systems - IOS (ආයතන අතර):</strong> EDI, VMI, CPFR, B2B Platforms.
         </p>
-        <div class="example-badge p-3 rounded-lg mt-3 text-xs">
-          <strong>🌍 Real-World Example (VMI):</strong> Walmart සහ P&G අතර ඇති සම්බන්ධතාවය වැනි සපයන්නා විසින් තොග පාලනය කරන පද්ධති (VMI) යනු Inter-Organisational System එකකි.
-        </div>
       </div>
     </section>
 
@@ -239,8 +319,7 @@
           • <strong>Cost Leadership:</strong> අඩුම පිරිවැය පවත්වා ගැනීම (උදා: <em>Walmart / D-Mart</em> - Lean ERP සහ Automation).<br>
           • <strong>Differentiation:</strong> විශේෂිත ගුණාත්මකභාවයක් ලබා දීම (උදා: <em>Apple / Starbucks</em> - CRM සහ AI personalization).<br>
           • <strong>Focus:</strong> කුඩා පාරිභෝගික කණ්ඩායමකට විශේෂිතව සේවය කිරීම (උදා: <em>Rolex</em>).<br>
-          • <strong>Functional IT Tools:</strong> Marketing (CRM), Operations (ERP & IoT), HR (HRIS), Finance (Planning software), R&D/IT (PLM & DevOps).<br>
-          • <strong>Time Horizon:</strong> Business-Level = <strong>අවුරුදු 3–5+</strong> | Functional-Level = <strong>වාර්ෂික / දෛනික</strong>.
+          • <strong>Functional IT Tools:</strong> Marketing (CRM), Operations (ERP & IoT), HR (HRIS), Finance (Planning software), R&D/IT (PLM & DevOps).
         </p>
       </div>
     </section>
@@ -254,10 +333,9 @@
         <h3 class="text-lg font-bold text-amber-400">AMC Model, නවෝත්පාදන වර්ග 3 සහ Cloud Case</h3>
         <p class="text-sm text-slate-300 mt-2">
           • <strong>AMC Model (Chen, 1996):</strong> <strong>Awareness</strong> (දැනුවත්භාවය) + <strong>Motivation</strong> (පෙළඹවීම) + <strong>Capability</strong> (හැකියාව) තිබුණහොත් පමණක් ප්‍රතිවාදියා ප්‍රතිචාර දක්වයි.<br>
-          • <strong>Incremental Innovation ("Polish it"):</strong> පවතින දේ කුඩා ප්‍රමාණයකින් දියුණු කිරීම (උදා: මෘදුකාංග යාවත්කාලීන කිරීම්).<br>
-          • <strong>Architectural Innovation ("Rearrange it"):</strong> පවතින කොටස් අලුත් ක්‍රමයකට එකතු කිරීම (උදා: Monolithic සිට Microservices වෙත API හරහා යාම).<br>
-          • <strong>Breakthrough Innovation ("Reinvent it"):</strong> සම්පූර්ණයෙන්ම නව තාක්ෂණයක් හඳුන්වා දීම (උදා: 2006 AWS Cloud, 2007 iPhone, 2022 ChatGPT).<br>
-          • <strong>Cloud Market Share (Q1 2026):</strong> AWS (28%), Microsoft (21%), Google (14%). Big Three එකතුව <strong>~63%</strong> වේ.
+          • <strong>Incremental Innovation:</strong> පවතින දේ කුඩා ප්‍රමාණයකින් දියුණු කිරීම.<br>
+          • <strong>Architectural Innovation:</strong> පවතින කොටස් අලුත් ක්‍රමයකට එකතු කිරීම (උදා: Monolithic සිට Microservices වෙත API හරහා යාම).<br>
+          • <strong>Breakthrough Innovation:</strong> සම්පූර්ණයෙන්ම නව තාක්ෂණයක් හඳුන්වා දීම (උදා: 2006 AWS Cloud, 2007 iPhone, 2022 ChatGPT).
         </p>
       </div>
     </section>
@@ -291,17 +369,17 @@
         q: "1. Which of the following is NOT a key characteristic of a business process?",
         opts: ["A) Has a start and end point (trigger and outcome)", "B) Is repeatable and happens again and again", "C) Is strictly confined to a single department", "D) Is measurable in time, cost, quality, and output"],
         ans: 2,
-        exp: "නිවැරදි පිළිතුර C වේ. Business Process එකක් යනු එක් දෙපාර්තමේන්තුවකට සීමා නොවී ආයතනය පුරා (Cross-functional / End-to-end) විහිදෙන එකකි."
+        exp: "නිවැරදි පිළිතුර C වේ. Business Process එකක් යනු එක් දෙපාර්තමේන්තුවකට සීමා නොවී ආයතනය පුරා විහිදෙන එකකි."
       },
       {
         q: "2. Which technique uses IT event-log data from ERP/CRM systems and AI to discover how a business process actually runs in practice?",
         opts: ["A) Process Modelling", "B) Process Mining", "C) Process Reengineering (BPR)", "D) Process Improvement (BPI)"],
         ans: 1,
-        exp: "නිවැරදි පිළිතුර B වේ. IT event-log දත්ත සහ AI භාවිතයෙන් සැබෑ ක්‍රියාවලිය සොයා ගැනීම Process Mining ලෙස හැඳින්වේ."
+        exp: "නිවැරදි පිළිතුර B වේ. IT event-log දත්ත සහ AI භාවිතයෙන් සැබෑ ක්‍රියාවලිය සොයා ගැනීම Process Mining වේ."
       },
       {
         q: "3. What is the primary difference between Process Reengineering (BPR) and Process Improvement (BPI)?",
-        opts: ["A) BPR is a radical redesign of a process from scratch, while BPI is a focused, one-off effort to fix or enhance a specific process", "B) BPR is only used for IT, while BPI is for HR", "C) BPR is a continuous daily task", "D) There is no difference"],
+        opts: ["A) BPR is a radical redesign of a process from scratch, while BPI is a focused, one-off effort to fix or enhance a specific process", "B) BPR is only used for IT", "C) BPR is continuous", "D) There is no difference"],
         ans: 0,
         exp: "නිවැරදි පිළිතුර A වේ. BPR මඟින් මුල සිට සම්පූර්ණයෙන්ම අලුතින් සැලසුම් කරන අතර BPI මඟින් නිශ්චිත ක්‍රියාවලියක් වැඩිදියුණු කරයි."
       },
@@ -319,7 +397,7 @@
       },
       {
         q: "6. How does Business Process Management (BPM) differ from Project Management?",
-        opts: ["A) BPM is a temporary one-time work with a fixed end date", "B) BPM is a continuous, repeatable, and ongoing discipline covering the whole value stream, unlike temporary projects", "C) Project management never ends", "D) BPM has no scope"],
+        opts: ["A) BPM is temporary", "B) BPM is a continuous, repeatable, and ongoing discipline covering the whole value stream, unlike temporary projects", "C) Project management never ends", "D) BPM has no scope"],
         ans: 1,
         exp: "නිවැරදි පිළිතුර B වේ. Project management යනු තාවකාලික එක් වරක් කරන වැඩක් වන අතර BPM යනු අඛණ්ඩව නැවත නැවත සිදුවන විනයකි."
       },
@@ -333,7 +411,7 @@
         q: "8. Which of the following is an example of an Inter-Organisational System (IOS) that spans across separate organisations?",
         opts: ["A) Internal MIS and Intranet", "B) Transaction Processing System (TPS)", "C) Electronic Data Interchange (EDI) and Vendor-Managed Inventory (VMI)", "D) Knowledge Management System"],
         ans: 2,
-        exp: "නිවැරදි පිළිතුර C වේ. EDI සහ VMI යනු ආයතන දෙකක් හෝ වැඩි ගණනක් අතර සම්බන්ධ වන Inter-Organisational Systems වේ."
+        exp: "නිවැරදි පිළිතුර C වේ. EDI සහ VMI යනු ආයතන අතර සම්බන්ධ වන Inter-Organisational Systems වේ."
       },
       {
         q: "9. Systems operating within the boundaries of a single organisation to connect its own departments are known as:",
@@ -361,9 +439,9 @@
       },
       {
         q: "13. According to the IT-Enabled Value Creation Model, where does true competitive advantage come from?",
-        opts: ["A) Buying the most expensive computers", "B) The strategic alignment and fit between IT resources and business resources (people, processes, strategy)", "C) Shutting down the IT department", "D) Copying rivals instantly"],
+        opts: ["A) Buying expensive computers", "B) The strategic alignment and fit between IT resources and business resources (people, processes, strategy)", "C) Shutting down IT", "D) Copying rivals"],
         ans: 1,
-        exp: "නිවැරදි පිළිතුර B වේ. සැබෑ වාසිය ලැබෙන්නේ IT සම්පත් සහ ව්‍යාපාරික සම්පත් (මිනිසුන්, ක්‍රියාවලි, උපායමාර්ගය) නිසි ලෙස ගැළපීමෙනි."
+        exp: "නිවැරදි පිළිතුර B වේ. සැබෑ වාසිය ලැබෙන්නේ IT සම්පත් සහ ව්‍යාපාරික සම්පත් නිසි ලෙස ගැළපීමෙනි."
       },
       {
         q: "14. Among the 3 levels of strategy, who decides 'which industries/businesses to compete in' at the Corporate Level?",
@@ -385,7 +463,7 @@
       },
       {
         q: "17. What is the typical time horizon for Business-Level Strategy vs. Functional-Level Strategy?",
-        opts: ["A) Business-Level: Medium to long term (3–5+ years) | Functional-Level: Short to medium term (yearly / day-to-day)", "B) Business-Level: 1 day | Functional-Level: 20 years", "C) Both are 1 month", "D) No time horizon"],
+        opts: ["A) Business-Level: Medium to long term (3–5+ years) | Functional-Level: Short to medium term (yearly / day-to-day)", "B) Business-Level: 1 day", "C) Both are 1 month", "D) No time horizon"],
         ans: 0,
         exp: "නිවැරදි පිළිතුර A වේ. Business-level strategy යනු අවුරුදු 3-5+ වන අතර Functional-level යනු වාර්ෂික හෝ දෛනික වේ."
       },
@@ -397,9 +475,9 @@
       },
       {
         q: "19. According to research insights in Session 7 (Slide 10), which moves draw responses more often, and how do small firms behave compared to large firms?",
-        opts: ["A) Easily reversed tactical moves (e.g., price cuts) draw responses more often; small firms act faster and more often", "B) Strategic moves draw more responses; large firms act faster", "C) Tactical moves are ignored", "D) Small firms never respond"],
+        opts: ["A) Easily reversed tactical moves (e.g., price cuts) draw responses more often; small firms act faster and more often", "B) Strategic moves draw responses", "C) Tactical moves are ignored", "D) Small firms never respond"],
         ans: 0,
-        exp: "නිවැරදි පිළිතුර A වේ. පහසුවෙන් ආපසු හැරවිය හැකි tactical moves (මිල අඩු කිරීම් වැනි) වලට ප්‍රතිවාදීන් නිතර ප්‍රතිචාර දක්වයි; කුඩා සමාගම් වේගයෙන් ක්‍රියා කරයි."
+        exp: "නිවැරදි පිළිතුර A වේ. පහසුවෙන් ආපසු හැරවිය හැකි tactical moves වලට ප්‍රතිවාදීන් නිතර ප්‍රතිචාර දක්වයි; කුඩා සමාගම් වේගයෙන් ක්‍රියා කරයි."
       },
       {
         q: "20. According to the AMC Model (Chen, 1996), what three conditions must be present for a rival to respond?",
@@ -421,9 +499,9 @@
       },
       {
         q: "23. According to Henderson & Clark (1990), moving from a monolithic application to microservices connected via an API layer is an example of:",
-        opts: ["A) Incremental Innovation ('Polish it')", "B) Architectural Innovation ('Rearrange it')", "C) Breakthrough Innovation ('Reinvent it')", "D) Tactical pricing"],
+        opts: ["A) Incremental Innovation", "B) Architectural Innovation ('Rearrange it')", "C) Breakthrough Innovation", "D) Tactical pricing"],
         ans: 1,
-        exp: "නිවැරදි පිළිතුර B වේ. සංරචක අතර සබැඳියා (links) වෙනස් කිරීම Architectural Innovation ('Rearrange it') වේ."
+        exp: "නිවැරදි පිළිතුර B වේ. සංරචක අතර සබැඳියා වෙනස් කිරීම Architectural Innovation වේ."
       },
       {
         q: "24. The launch of AWS Cloud in 2006, the first iPhone in 2007, and ChatGPT in November 2022 are examples of:",
@@ -445,7 +523,7 @@
       },
       {
         q: "27. Based on Handwritten Note Page 1, how do 'Strategic Management' and 'Strategic Competitiveness' differ?",
-        opts: ["A) Management is an action/process, while Competitiveness is a goal/outcome", "B) Both refer only to finance", "C) Management is a goal and Competitiveness is a process", "D) No relation"],
+        opts: ["A) Management is an action/process, while Competitiveness is a goal/outcome", "B) Both refer to finance", "C) Management is a goal", "D) No relation"],
         ans: 0,
         exp: "නිවැරදි පිළිතුර A වේ. Management යනු ක්‍රියාවලියක් වන අතර Competitiveness යනු එහි ප්‍රතිඵලය වේ."
       },
@@ -459,11 +537,11 @@
         q: "29. According to the University Case Study (Note Pages 3 & 4), which technology should the university prioritize first and why?",
         opts: ["A) Gaming PCs", "B) Student Information System (SIS) + Learning Management System (LMS), because it instantly improves workflow and student tracking", "C) No systems", "D) Robots"],
         ans: 1,
-        exp: "නිවැරදි පිළිතුර B වේ. දෛනික වැඩ කටයුතු සහ ශිෂ්‍ය ලුහුබැඳීම (student tracking) ක්ෂණිකව දියුණු කිරීමට SIS සහ LMS වැදගත් වේ."
+        exp: "නිවැරදි පිළිතුර B වේ. දෛනික වැඩ කටයුතු සහ ශිෂ්‍ය ලුහුබැඳීම දියුණු කිරීමට SIS සහ LMS වැදගත් වේ."
       },
       {
         q: "30. What does PESTEL stand for, and how is 'Poor IT Governance' classified in the ABC University activity (Note Pages 4 & 5)?",
-        opts: ["A) PESTEL = Political, Economic, Social, Technological, Environmental, Legal | Poor IT Governance = Internal Weakness", "B) PESTEL = People, Energy, System, Tech, Era, Law | External Opportunity", "C) PESTEL = Product, Export, Sales, Tax, Equity, Loan | Internal Strength", "D) None of the above"],
+        opts: ["A) PESTEL = Political, Economic, Social, Technological, Environmental, Legal | Poor IT Governance = Internal Weakness", "B) PESTEL = People, Energy, System", "C) PESTEL = Product, Export", "D) None"],
         ans: 0,
         exp: "නිවැරදි පිළිතුර A වේ. PESTEL යනු රාජ්‍ය, ආර්ථික, සමාජීය, තාක්ෂණික, පරිසර හා නීතිමය සාධක වන අතර Poor IT Governance යනු අභ්‍යන්තර දුර්වලතාවයකි."
       }
@@ -523,6 +601,7 @@
       document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
       document.querySelectorAll('.tab-btn').forEach(btn => {
         btn.classList.remove('tab-active');
+        btn.classList.remove('bg-blue-600', 'text-white');
         btn.classList.add('bg-slate-800', 'text-slate-300');
       });
       document.getElementById(tabId).classList.remove('hidden');
